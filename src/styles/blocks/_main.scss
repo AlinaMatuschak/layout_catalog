@@ -8,10 +8,8 @@
 
   @include fontRegular;
   line-height: 13px;
-}
-
-@media (max-width: ($card-width + $card-ver-gap) * 4) {
-  .main {
+  
+  @media (max-width: ($card-width + $card-ver-gap) * 4) {
     grid-template-columns: repeat(auto-fit, $card-width);
   }
 }
