@@ -1,5 +1,10 @@
 .page {
-  &__header {
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-rows: 60px auto;
+  grid-gap: 50px;
+
+  &__main {
+    display: grid;
+    justify-content: center;
   }
 }

@@ -2,26 +2,17 @@
 @import "./../variables";
 
 .main {
-  @include flex(center);
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
+  grid-column-gap: $card-hor-gap;
+  grid-row-gap: $card-ver-gap;
 
-  &__cards {
-    @include flex(center);
-    flex-wrap: wrap;
-    width: ($card-width + $card-hor-gap) * 4;
-    line-height: 13px;
-    @include fontRegular;
-  }
+  @include fontRegular;
+  line-height: 13px;
+}
 
-  &__card {
-    margin-bottom: 50px;
-    margin-left: $card-hor-gap;
-
-    &:first-child {
-      margin-left: 0;
-    }
-    
-    &:nth-child(5) {
-      margin-left: 0;
-    }
+@media (max-width: ($card-width + $card-ver-gap) * 4) {
+  .main {
+    grid-template-columns: repeat(auto-fit, $card-width);
   }
 }
