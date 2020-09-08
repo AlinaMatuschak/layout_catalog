@@ -4,8 +4,7 @@
 .main {
   display: grid;
   grid-template-columns: repeat(4, $card-width);
-  grid-column-gap: $card-hor-gap;
-  grid-row-gap: $card-ver-gap;
+  grid-gap: $card-hor-gap $card-ver-gap;
 
   @include fontRegular;
   line-height: 13px;
